@@ -1,0 +1,22 @@
+1. 更换软件源（apt源和pip源）
+  1. 更换 apt 源
+    $ cd /etc/apt/
+    $ sudo cp sources.list sources.list.bak && sudo vim sources.list.txt
+       替换备份的文件内容
+    $ sudo apt update
+    $ sudo apt upgrade
+
+  2. 更换 pip 源
+    $ mkdir ~/.pip && vim ~/.pip/pip.conf
+       替换备份的文件内容
+
+
+2. 给内置 python3.6 安装 pip
+    退出 shell 重新进入 terminal 即可安装
+    $ wget bootstrap.pypa.io/get-pip.py  # 下载 get-pip.py 文件，如果有就跳过
+  $ sudo python3 get-pip.py
+
+3. 安装 vimplus 插件
+  $ git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+  $ cd ~/.vimplus
+  $ ./install.sh
